@@ -1,0 +1,145 @@
+/* ==========================================================================
+   LOGOS & EXISTENCE · DESIGN TOKENS (AEGEAN DAWN & CLARITY EDITION)
+   哲学史殿堂 · 视觉与语义设计规范系统：爱琴海破晓 · 理性清明与觉醒
+   “神秘是入口，光明是过程，觉醒是抵达”
+   ========================================================================== */
+
+:root {
+  /* 默认：爱琴海破晓与理性清明体系 (Aegean Dawn & Radiant Clarity) */
+  --theme-mode: "dawn";
+
+  /* 基础背景体系 (Luminous Aegean Dawn & Classical Marble) */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-surface: rgba(255, 255, 255, 0.88);
+  --bg-surface-elevated: #ffffff;
+  --bg-surface-soft: rgba(255, 255, 255, 0.65);
+  --bg-glass: rgba(255, 255, 255, 0.82);
+  --bg-glass-heavy: rgba(255, 255, 255, 0.94);
+  --bg-glass-card: rgba(255, 255, 255, 0.82);
+  --bg-backdrop-filter: blur(18px) saturate(160%);
+
+  /* 曙光与朝霞渐变 (Sunburst & Dawn Sky Gradients) */
+  --sky-dawn-top: #bae6fd;
+  --sky-dawn-mid: #fef08a;
+  --sky-dawn-glow: #fed7aa;
+  --bg-gradient-page: linear-gradient(180deg, #dbeafe 0%, #fef3c7 15%, #fffbeb 40%, #f8fafc 85%);
+
+  /* 金石光华与日光 (Radiant Sunlight & Classical Gilded Gold) */
+  --gold-primary: #b45309;
+  --gold-light: #d97706;
+  --gold-accent: #f59e0b;
+  --gold-bright: #fbbf24;
+  --gold-muted: #78350f;
+  --gold-dark: #451a03;
+  --gold-glow: rgba(245, 158, 11, 0.25);
+  --gold-glow-intense: rgba(217, 119, 6, 0.45);
+
+  /* 爱琴海碧空与理性清明 (Aegean Azure & Epistemic Clarity) */
+  --color-rational-cyan: #0284c7;
+  --color-rational-light: #e0f2fe;
+  --color-rational-glow: rgba(2, 132, 199, 0.22);
+  
+  /* 诗性晨曦与橄榄绿 (Poetic Rose & Olive of Awakening) */
+  --color-poetic-purple: #9333ea;
+  --color-poetic-light: #f3e8ff;
+  --color-poetic-glow: rgba(147, 51, 234, 0.2);
+  --color-olive-wisdom: #3f6212;
+  --color-olive-light: #ecfccb;
+  --color-dawn-rose: #e11d48;
+  --color-passion-crimson: #be123c;
+
+  /* 文字层次与高对比度排版 (Classical Epigraphic Typography) */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
+  --text-gold: #92400e;
+  --text-on-dark: #f8fafc;
+
+  /* 边框与古典大理石分割线 (Marble Borders & Gilded Lines) */
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.75);
+  --border-card: rgba(217, 119, 6, 0.2);
+  --border-gold-subtle: rgba(217, 119, 6, 0.28);
+  --border-gold-focus: rgba(217, 119, 6, 0.7);
+
+  /* 字体家族 (Typography) */
+  --font-serif: "Cinzel", "Cormorant Garamond", "Noto Serif SC", "Songti SC", "SimSun", Georgia, serif;
+  --font-sans: "Outfit", "Inter", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* 曙光阴影与立体感 (Atmospheric Marble Shadows) */
+  --shadow-subtle: 0 4px 18px rgba(148, 163, 184, 0.18), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-medium: 0 12px 32px rgba(148, 163, 184, 0.22), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-elevated: 0 20px 48px rgba(180, 83, 9, 0.14), 0 4px 12px rgba(15, 23, 42, 0.06);
+  --shadow-gold: 0 0 30px rgba(245, 158, 11, 0.22);
+  --shadow-cyan: 0 0 25px rgba(2, 132, 199, 0.18);
+
+  /* 缓动与转场 */
+  --ease-poetic: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-swift: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 0.22s;
+  --duration-normal: 0.38s;
+  --duration-slow: 0.8s;
+
+  /* 容器与间距 */
+  --container-max: 1280px;
+  --container-wide: 1440px;
+  --nav-height: 74px;
+}
+
+/* 沉夜星宿深邃模式 (Cosmic Night - Optional Switch) */
+[data-theme="dark"] {
+  --theme-mode: "dark";
+  --bg-primary: #07090e;
+  --bg-secondary: #0b0e15;
+  --bg-surface: #101520;
+  --bg-surface-elevated: #161c2b;
+  --bg-surface-soft: rgba(22, 28, 43, 0.5);
+  --bg-glass: rgba(16, 21, 32, 0.82);
+  --bg-glass-heavy: rgba(11, 14, 21, 0.94);
+  --bg-glass-card: rgba(22, 28, 43, 0.65);
+  --bg-backdrop-filter: blur(16px);
+
+  --bg-gradient-page: radial-gradient(circle at 50% 0%, #151b2a 0%, #07090e 70%);
+
+  --gold-primary: #d4af37;
+  --gold-light: #fae69e;
+  --gold-accent: #f59e0b;
+  --gold-bright: #fde047;
+  --gold-muted: #a68936;
+  --gold-dark: #68531c;
+  --gold-glow: rgba(212, 175, 55, 0.22);
+  --gold-glow-intense: rgba(212, 175, 55, 0.45);
+
+  --color-rational-cyan: #38bdf8;
+  --color-rational-light: rgba(56, 189, 248, 0.12);
+  --color-rational-glow: rgba(56, 189, 248, 0.2);
+  --color-poetic-purple: #c084fc;
+  --color-poetic-light: rgba(192, 132, 252, 0.12);
+  --color-poetic-glow: rgba(192, 132, 252, 0.2);
+  --color-olive-wisdom: #84cc16;
+  --color-olive-light: rgba(132, 204, 22, 0.12);
+  --color-dawn-rose: #fb7185;
+  --color-passion-crimson: #fb7185;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  --text-gold: #f3df97;
+  --text-on-dark: #f8fafc;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.12);
+  --border-card: rgba(212, 175, 55, 0.22);
+  --border-gold-subtle: rgba(212, 175, 55, 0.25);
+  --border-gold-focus: rgba(212, 175, 55, 0.6);
+
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --shadow-elevated: 0 20px 50px rgba(0, 0, 0, 0.7);
+  --shadow-gold: 0 0 25px rgba(212, 175, 55, 0.2);
+  --shadow-cyan: 0 0 25px rgba(56, 189, 248, 0.15);
+}

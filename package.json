@@ -1,0 +1,18 @@
+{
+  "name": "philosophy-history",
+  "version": "1.0.0",
+  "private": true,
+  "description": "逻各斯的星宿 · 哲学史的六次转折 (Logos & Existence)",
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000",
+    "serve": "npx serve . -l 3000"
+  },
+  "keywords": [
+    "philosophy",
+    "history",
+    "static-site"
+  ],
+  "author": "",
+  "license": "MIT"
+}

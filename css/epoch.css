@@ -1,0 +1,534 @@
+/* ==========================================================================
+   LOGOS & EXISTENCE · EPOCH DETAIL STYLES (AEGEAN DAWN & CLARITY EDITION)
+   哲学史六大转折纪元 · 深度详情页专属排版与交互组件
+   ========================================================================== */
+
+/* 纪元专属英雄展台 (Epoch Hero Banner with Aegean Terraces) */
+.epoch-detail-hero {
+  position: relative;
+  padding: 9.5rem 0 5.5rem;
+  background: 
+    radial-gradient(circle at 75% 20%, rgba(254, 240, 138, 0.45) 0%, rgba(254, 215, 170, 0.25) 30%, transparent 60%),
+    radial-gradient(circle at 20% 50%, rgba(186, 230, 253, 0.45) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(224, 242, 254, 0.4) 0%, rgba(255, 255, 255, 0.8) 60%, var(--bg-primary) 100%);
+  border-bottom: 1px solid var(--border-gold-subtle);
+  overflow: hidden;
+}
+
+/* 纪元专属唯美拂晓背景图层 */
+.epoch-detail-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.75) 55%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.75) 55%, rgba(0,0,0,0) 100%);
+}
+
+[data-theme="dark"] .epoch-detail-hero::before {
+  opacity: 0.22;
+  filter: brightness(0.8) contrast(1.1);
+}
+
+.epoch-detail-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 依据当前纪元页面载入对应意境背景 */
+body.epoch-page-1 .epoch-detail-hero::before { background-image: url('../assets/epoch-bg-1.png'); }
+body.epoch-page-2 .epoch-detail-hero::before { background-image: url('../assets/epoch-bg-2.png'); }
+body.epoch-page-3 .epoch-detail-hero::before { background-image: url('../assets/epoch-bg-3.png'); }
+body.epoch-page-4 .epoch-detail-hero::before { background-image: url('../assets/epoch-bg-1.png'); transform: scaleX(-1); }
+body.epoch-page-5 .epoch-detail-hero::before { background-image: url('../assets/epoch-bg-2.png'); transform: scaleX(-1); }
+body.epoch-page-6 .epoch-detail-hero::before { background-image: url('../assets/epoch-bg-3.png'); transform: scaleX(-1); }
+
+[data-theme="dark"] .epoch-detail-hero {
+  background: radial-gradient(circle at 50% 20%, rgba(26, 34, 52, 0.7) 0%, rgba(7, 9, 14, 0.95) 75%);
+}
+
+.epoch-hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.epoch-num-tag {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.7) 0%, rgba(255, 255, 255, 0.9) 100%);
+  border: 1px solid var(--border-gold-subtle);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(180, 83, 9, 0.08);
+}
+
+[data-theme="dark"] .epoch-num-tag {
+  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.15);
+}
+
+.epoch-timespan {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.epoch-hero-title {
+  font-size: 3.6rem;
+  line-height: 1.2;
+  margin-bottom: 1.35rem;
+  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--text-primary) 20%, var(--gold-primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.epoch-paradigm-callout {
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(224, 242, 254, 0.85) 0%, rgba(255, 255, 255, 0.9) 100%);
+  border-left: 4px solid var(--color-rational-cyan);
+  padding: 0.85rem 1.45rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 2rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-rational-cyan);
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.08);
+  border-top: 1px solid rgba(2, 132, 199, 0.15);
+  border-right: 1px solid rgba(2, 132, 199, 0.15);
+  border-bottom: 1px solid rgba(2, 132, 199, 0.15);
+}
+
+[data-theme="dark"] .epoch-paradigm-callout {
+  background: rgba(56, 189, 248, 0.08);
+  color: #bae6fd;
+}
+
+.epoch-hero-lead {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 940px;
+  line-height: 1.9;
+}
+
+/* 纪元快捷切换栏 (Epoch Quick Switcher) */
+.epoch-switcher-nav {
+  position: sticky;
+  top: var(--nav-height);
+  z-index: 100;
+  background: var(--bg-glass-heavy);
+  backdrop-filter: var(--bg-backdrop-filter);
+  -webkit-backdrop-filter: var(--bg-backdrop-filter);
+  border-bottom: 1px solid var(--border-gold-subtle);
+  padding: 0.85rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.switcher-pills {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  overflow-x: auto;
+  padding: 0.25rem 0;
+}
+
+.switcher-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-serif);
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  padding: 0.45rem 0.95rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  font-weight: 500;
+  transition: all var(--duration-fast) var(--ease-swift);
+}
+
+.switcher-pill:hover,
+.switcher-pill.active {
+  color: var(--gold-primary);
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.65) 0%, rgba(255, 255, 255, 0.9) 100%);
+  border-color: var(--border-gold-subtle);
+  box-shadow: 0 2px 8px rgba(180, 83, 9, 0.08);
+}
+
+/* 核心论题与原典名言深度剖析卡片 */
+.thesis-section {
+  padding: 5.5rem 0;
+}
+
+.thesis-card {
+  background: var(--bg-glass-card);
+  border: 1px solid var(--border-gold-subtle);
+  border-radius: 18px;
+  padding: 3.5rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  box-shadow: var(--shadow-medium);
+  backdrop-filter: blur(14px);
+}
+
+.thesis-card::after {
+  content: '§';
+  position: absolute;
+  top: 1.5rem;
+  right: 2.25rem;
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  color: rgba(217, 119, 6, 0.12);
+  user-select: none;
+}
+
+.thesis-quote-header {
+  margin-bottom: 2rem;
+}
+
+.thesis-origin-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  font-weight: 700;
+}
+
+.thesis-main-quote {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  line-height: 1.4;
+  color: var(--text-primary);
+  margin-bottom: 0.85rem;
+  font-weight: 700;
+}
+
+.thesis-original-language {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--gold-primary);
+  margin-bottom: 1.25rem;
+}
+
+.thesis-author-cite {
+  font-size: 0.98rem;
+  color: var(--text-muted);
+}
+
+.thesis-author-cite strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* 辩证推导与论驳网格 */
+.dialectic-proof-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2.5rem;
+  margin-top: 2.25rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--border-gold-subtle);
+}
+
+.proof-col h4,
+.objection-col h4 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--gold-primary);
+  letter-spacing: 0.08em;
+  margin-bottom: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.proof-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.proof-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.4) 0%, rgba(255, 255, 255, 0.85) 100%);
+  border-radius: 10px;
+  padding: 1.15rem 1.35rem;
+  border: 1px solid var(--border-gold-subtle);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="dark"] .proof-step {
+  background: rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.step-num {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: #ffffff;
+  background: var(--gold-primary);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+.step-content strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.step-content p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.objection-box {
+  background: linear-gradient(135deg, rgba(255, 241, 242, 0.85) 0%, rgba(255, 255, 255, 0.9) 100%);
+  border: 1px solid rgba(225, 29, 72, 0.25);
+  border-radius: 10px;
+  padding: 1.35rem 1.6rem;
+  box-shadow: 0 2px 10px rgba(225, 29, 72, 0.05);
+}
+
+[data-theme="dark"] .objection-box {
+  background: rgba(225, 29, 72, 0.08);
+}
+
+.objection-box h5 {
+  color: var(--color-dawn-rose);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.objection-box p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* 思想家图谱卡片 (Philosopher Dossiers) */
+.philosophers-dossier-section {
+  padding: 4.5rem 0 6.5rem;
+}
+
+.dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+  margin-top: 2.75rem;
+}
+
+.dossier-card {
+  background: var(--bg-glass-card);
+  border: 1px solid var(--border-gold-subtle);
+  border-radius: 14px;
+  padding: 2.35rem;
+  transition: all var(--duration-normal) var(--ease-poetic);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.dossier-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-light);
+  box-shadow: var(--shadow-elevated);
+}
+
+.dossier-avatar-symbol {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-accent);
+  background: radial-gradient(circle, rgba(254, 240, 138, 0.6) 0%, rgba(217, 119, 6, 0.15) 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin-bottom: 1.35rem;
+  box-shadow: 0 4px 12px var(--gold-glow);
+}
+
+.dossier-name {
+  font-size: 1.45rem;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.dossier-greek-name {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--gold-primary);
+  margin-bottom: 0.85rem;
+}
+
+.dossier-dates {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.dossier-desc {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1.35rem;
+}
+
+.dossier-opus {
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.45) 0%, rgba(255, 255, 255, 0.75) 100%);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  color: var(--gold-muted);
+  border: 1px solid var(--border-gold-subtle);
+}
+
+[data-theme="dark"] .dossier-opus {
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--text-gold);
+}
+
+.dossier-opus strong {
+  color: var(--gold-primary);
+}
+
+/* 时代转折的历史与当代启示展板 */
+.impact-banner {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(254, 243, 199, 0.65) 100%);
+  border: 1.5px solid var(--border-gold-subtle);
+  border-radius: 16px;
+  padding: 3.5rem;
+  margin: 4rem 0 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  box-shadow: var(--shadow-medium);
+  backdrop-filter: blur(14px);
+}
+
+[data-theme="dark"] .impact-banner {
+  background: linear-gradient(135deg, rgba(22, 28, 43, 0.8) 0%, rgba(11, 14, 21, 0.95) 100%);
+}
+
+.impact-col h3 {
+  font-size: 1.65rem;
+  color: var(--gold-primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.impact-col p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+/* 底部前后纪元跳转 (Epoch Pagination) */
+.epoch-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.5rem 0;
+  border-top: 1px solid var(--border-gold-subtle);
+  margin-top: 4rem;
+}
+
+.pagination-btn {
+  display: flex;
+  flex-direction: column;
+  padding: 1.35rem 2.25rem;
+  border-radius: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-gold-subtle);
+  transition: all var(--duration-fast) var(--ease-swift);
+  box-shadow: 0 4px 14px rgba(180, 83, 9, 0.06);
+}
+
+.pagination-btn:hover {
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.7) 0%, #ffffff 100%);
+  border-color: var(--gold-light);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(180, 83, 9, 0.15);
+}
+
+.pagination-btn.next {
+  text-align: right;
+  margin-left: auto;
+}
+
+.pagination-label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.pagination-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--gold-primary);
+  font-weight: 700;
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+  .epoch-hero-title { font-size: 2.75rem; }
+  .dialectic-proof-grid { grid-template-columns: 1fr; }
+  .dossier-grid { grid-template-columns: repeat(2, 1fr); }
+  .impact-banner { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+@media (max-width: 640px) {
+  .epoch-hero-title { font-size: 2.1rem; }
+  .thesis-card { padding: 2rem 1.5rem; }
+  .thesis-main-quote { font-size: 1.6rem; }
+  .dossier-grid { grid-template-columns: 1fr; }
+  .epoch-pagination { flex-direction: column; gap: 1.5rem; }
+  .pagination-btn { width: 100%; text-align: center; }
+  .pagination-btn.next { text-align: center; }
+}

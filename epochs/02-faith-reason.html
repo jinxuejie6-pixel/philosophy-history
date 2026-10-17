@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第二纪元：信仰幽谷 · 超验神性与理性天梯的博弈 | 逻各斯的星宿</title>
+  <meta name="description" content="中世纪哲学深度文献：教父哲学到经院哲学，奥古斯丁恩典论、托马斯·阿奎那五路证明与奥卡姆剃刀开启的唯名论裂解。">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/epoch.css">
+  <script src="../js/main.js" defer></script>
+  <script src="../js/dialectics.js" defer></script>
+</head>
+<body class="epoch-page-2">
+  <div id="scroll-progress"></div>
+  <canvas id="cosmos-canvas"></canvas>
+
+  <div class="content-wrapper">
+    <!-- 顶部导航栏 -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <a href="../index.html" class="brand-logo" aria-label="返回哲学史殿堂首页">
+          <span class="brand-emblem">✦</span>
+          <div class="brand-title">
+            <span class="brand-main">逻各斯的星宿</span>
+            <span class="brand-sub">PHILOSOPHIA HISTORIA</span>
+          </div>
+        </a>
+
+        <button class="menu-toggle" aria-label="展开导航菜单" aria-expanded="false">☰</button>
+
+        <nav aria-label="主要导航">
+          <ul class="nav-links">
+            <li class="nav-item"><a href="../index.html"><span>首页</span></a></li>
+            <li class="nav-item"><a href="./01-axial-ontology.html"><span class="epoch-num">01</span><span>轴心破晓</span></a></li>
+            <li class="nav-item"><a href="./02-faith-reason.html" class="active"><span class="epoch-num">02</span><span>信仰幽谷</span></a></li>
+            <li class="nav-item"><a href="./03-subject-epistemology.html"><span class="epoch-num">03</span><span>主体觉醒</span></a></li>
+            <li class="nav-item"><a href="./04-kant-idealism.html"><span class="epoch-num">04</span><span>观念登峰</span></a></li>
+            <li class="nav-item"><a href="./05-crisis-existence.html"><span class="epoch-num">05</span><span>镜之碎裂</span></a></li>
+            <li class="nav-item"><a href="./06-linguistic-turn.html"><span class="epoch-num">06</span><span>语言星丛</span></a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="切换破晓/沉夜主题">
+            <span class="theme-icon">🌅</span>
+            <span class="theme-label">破晓之光</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 纪元快捷切换栏 -->
+    <nav class="epoch-switcher-nav" aria-label="纪元快速切换">
+      <div class="container switcher-pills">
+        <a href="./01-axial-ontology.html" class="switcher-pill"><span>I. 轴心破晓 (古希腊)</span></a>
+        <a href="./02-faith-reason.html" class="switcher-pill active"><span>II. 信仰幽谷 (中世纪)</span></a>
+        <a href="./03-subject-epistemology.html" class="switcher-pill"><span>III. 主体觉醒 (认识论)</span></a>
+        <a href="./04-kant-idealism.html" class="switcher-pill"><span>IV. 观念登峰 (康德与黑格尔)</span></a>
+        <a href="./05-crisis-existence.html" class="switcher-pill"><span>V. 镜之碎裂 (存在主义)</span></a>
+        <a href="./06-linguistic-turn.html" class="switcher-pill"><span>VI. 语言星丛 (现代与后现代)</span></a>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <!-- 纪元英雄展台 -->
+      <section class="epoch-detail-hero">
+        <div class="container">
+          <div class="epoch-hero-meta">
+            <span class="epoch-num-tag">EPOCH II · 古典再造与跨文化知识网</span>
+            <span class="epoch-timespan">公元前3世纪 — 公元14世纪 · 地中海世界 · 巴格达与科尔多瓦 · 东亚宋代</span>
+          </div>
+          <h1 class="epoch-hero-title">信仰幽谷：理性天梯、跨语种网络与心性天理</h1>
+          <div class="epoch-paradigm-callout">
+            <strong>范式跃迁：</strong>从单一希腊学园，跃迁至跨语种知识翻译大网络（希腊化罗马、阿拉伯智慧宫、犹太经院与拉丁神学）；东亚宋代理学则建立心性与天理本体。
+          </div>
+          <p class="epoch-hero-lead">
+            中世纪绝非单一孤立的欧洲修道院故事，而是一场席卷亚欧非三大洲的知识翻译、诠释与形而上学大综合。希腊化罗马斯多亚学派在帝国动荡中安顿心灵；巴格达与科尔多瓦的伊斯兰学者（法拉比、阿维森纳、阿威罗伊）与犹太哲人迈蒙尼德不仅保存并创造性诠释了亚里士多德与柏拉图，更开辟了关于本质与存在的根本叩问；拉丁经院以严密逻辑调和信仰与理性；同期东亚宋代理学则深入探究理气、心性与格物工夫，展现出多元文明共同深潜于终极实相的壮美图景。
+          </p>
+        </div>
+      </section>
+
+      <!-- 核心经典论题与原典辩难 -->
+      <section class="thesis-section">
+        <div class="container">
+          <div class="section-badge">Core Dialectics & Primary Theses</div>
+          <h2 class="section-title">原典经典论点与辩证推演</h2>
+
+          <!-- 论题 1: 奥古斯丁 -->
+          <article class="thesis-card">
+            <div class="thesis-quote-header">
+              <span class="thesis-origin-badge">Augustinian Illumination · 信仰与神圣光照论</span>
+              <blockquote class="thesis-main-quote">“我相信，因而我能够理解；若不信，我便无法明了。”</blockquote>
+              <div class="thesis-original-language">Credo ut intelligam (St. Augustine, Sermons 43.7, 9)</div>
+              <div class="thesis-author-cite"><strong>圣奥古斯丁（St. Augustine of Hippo）</strong> 《忏悔录》《论三位一体》</div>
+            </div>
+
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.85;">
+              在奥古斯丁看来，人类理性因原罪而蒙尘，单凭有限的肉眼与智力绝不可能触碰永恒真理。唯有凭借对上帝的信仰作为先导，灵魂才能沐浴在“神圣光照（Divine Illumination）”之中。他还开创了西方哲学内省心理学的巅峰，在《忏悔录》中对“时间”与“恶的本质”给出了深邃见解——恶并非实体，而只是善的亏损与背离（Privatio Boni）。
+            </p>
+
+            <div class="dialectic-proof-grid">
+              <div class="proof-col">
+                <h4><span>✦</span> 论证推演链条 (Premise & Derivation)</h4>
+                <div class="proof-chain">
+                  <div class="proof-step">
+                    <span class="step-num">1</span>
+                    <div class="step-content">
+                      <strong>受造物的有限性：</strong>
+                      <p>有限的人类理智不可能成为自身终极确据的基石，必须仰赖超越有限性的绝对存在。</p>
+                    </div>
+                  </div>
+                  <div class="proof-step">
+                    <span class="step-num">2</span>
+                    <div class="step-content">
+                      <strong>光照作为理解的前提：</strong>
+                      <p>正如肉眼唯有在太阳的光照下才能看清器物，理智唯有在神圣光照之下，才能分辨什么是普遍不易的真理。</p>
+                    </div>
+                  </div>
+                  <div class="proof-step">
+                    <span class="step-num">3</span>
+                    <div class="step-content">
+                      <strong>结论：信仰是理智的眼睛</strong>
+                      <p>信仰不是理性的对立面，而是理性的归宿与救赎。理解是信仰结出的甘美果实。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="objection-col">
+                <h4><span>⚖</span> 德尔图良的极端派反弹</h4>
+                <div class="objection-box">
+                  <h5>“正因为荒谬，所以我才相信”</h5>
+                  <p>
+                    教父德尔图良（Tertullian）发出极端质问：“雅典与耶路撒冷何干？学园与教会何涉？”他认为把异教的哲学理智强加于基督启示是狂妄的僭越。启示超绝于逻辑之外，因而“我信其荒谬（Credo quia absurdum）”。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 论题 2: 托马斯·阿奎那 五路证明 -->
+          <article class="thesis-card">
+            <div class="thesis-quote-header">
+              <span class="thesis-origin-badge">Thomistic Synthesis · 理性与信仰的和谐与五路证明</span>
+              <blockquote class="thesis-main-quote">“恩典并不废除自然，而是使自然趋于成全；理性是信仰的前庭。”</blockquote>
+              <div class="thesis-original-language">Gratia non tollit naturam, sed perficit (Summa Theologiae, I, q. 1, a. 8)</div>
+              <div class="thesis-author-cite"><strong>托马斯·阿奎那（Thomas Aquinas）</strong> 《神学大全》（Summa Theologiae）</div>
+            </div>
+
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.85;">
+              阿奎那实现了中世纪哲学最宏伟的综合：他把亚里士多德哲学引为天主教神学的坚固基座。他提出著名的“五路证明（Quinque Viae）”，完全从可见可感的自然经验出发，凭借严密的三段论证明最高不动推动者（第一推动力）、第一因、必然存在、完满尺度与目的指导者的必然存在。
+            </p>
+
+            <div class="dialectic-proof-grid">
+              <div class="proof-col">
+                <h4><span>✦</span> 论证推演链条（以第一因与运动为例）</h4>
+                <div class="proof-chain">
+                  <div class="proof-step">
+                    <span class="step-num">1</span>
+                    <div class="step-content">
+                      <strong>经验事实：</strong>
+                      <p>世界上的一切运动和变动，皆从潜能向现实转化，且必由已处于现实状态的外力所推动。</p>
+                    </div>
+                  </div>
+                  <div class="proof-step">
+                    <span class="step-num">2</span>
+                    <div class="step-content">
+                      <strong>拒绝因果无限倒退：</strong>
+                      <p>动因链条不能推向无穷，否则就没有最初的第一推动者，那么后继的一切动因与运动都不复存在。</p>
+                    </div>
+                  </div>
+                  <div class="proof-step">
+                    <span class="step-num">3</span>
+                    <div class="step-content">
+                      <strong>结论：存在一个不受外力推动的原初推动者</strong>
+                      <p>此纯粹现实、无任何潜能杂质的第一存在，众人皆称之为神。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="objection-col">
+                <h4><span>⚖</span> 近代怀疑论的反诘</h4>
+                <div class="objection-box">
+                  <h5>因果性链条的本体论跳跃</h5>
+                  <p>
+                    休谟与康德后世指出：即便宇宙存在一个因果终点，人类经验也无权将其等同于具有人格、仁慈与全知的造物主；因果范畴仅适用于现象界经验，不能非法越界推演至超验实体。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 论题 3: 希腊化与罗马哲学：动荡帝国中的心灵宁静与德性 -->
+          <article class="thesis-card">
+            <div class="thesis-quote-header">
+              <span class="thesis-origin-badge">Hellenistic & Roman · 控制二分法与自足宁静</span>
+              <blockquote class="thesis-main-quote">“有事情困扰你吗？它在你的控制范围之内，还是之外？如果在范围之外，你何必为它烦恼？”</blockquote>
+              <div class="thesis-original-language">Enchiridion (Epictetus) / Meditations (Marcus Aurelius)</div>
+              <div class="thesis-author-cite"><strong>爱比克泰德 · 马可·奥勒留 · 塞涅卡</strong></div>
+            </div>
+
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.85;">
+              在城邦瓦解、帝国动荡的时期，希腊化与罗马哲学不再着重建构抽象的城邦乌托邦，而是追问：个体如何在不可预测的世事沧桑中安顿心灵？斯多亚学派确立了著名的“控制二分法”：我们无法控制外在荣辱、财富与死亡，但完全能自主控制自己的判断、意志与德性；伊壁鸠鲁学派以去除对死亡与诸神的虚妄恐惧寻求心灵宁静（Ataraxia）；皮浪怀疑论则通过“悬置判断（Epoche）”摆脱独断教条的内耗与纷争。
+            </p>
+          </article>
+
+          <!-- 论题 4: 伊斯兰与犹太思想：智慧宫的翻译、存在与否定神学 -->
+          <article class="thesis-card">
+            <div class="thesis-quote-header">
+              <span class="thesis-origin-badge">Islamic & Jewish Enlightenment · 本质、存在与跨宗教理性</span>
+              <blockquote class="thesis-main-quote">“那本身必然存在者（Wājib al-Wujūd），其存在即是其本质，除它以外的一切皆为偶性存在。”</blockquote>
+              <div class="thesis-original-language">Kitāb al-Shifāʾ (Avicenna) / Dalālat al-Ḥā'irīn (Maimonides)</div>
+              <div class="thesis-author-cite"><strong>阿维森纳（伊本·西那） · 阿威罗伊 · 迈蒙尼德</strong></div>
+            </div>
+
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.85;">
+              8至13世纪的巴格达与科尔多瓦闪烁着人类理智的巅峰辉芒。阿维森纳在《治愈论》中做出了影响后世数个世纪的形而上学划界：区分“本质（Mahiyya）”与“存在（Wujud）”，指出事物是偶性的，唯有造物主是绝对必然的；阿威罗伊则以浩繁严谨的亚里士多德注疏，倡导哲学理性与宗教启示的双重真理协调说；犹太哲人迈蒙尼德在《迷途指津》中发展了精严的“否定神学”：人只能以否定性语言描述至高存在（它不是什么），从而破除了一切盲目拟人化的偶像迷信。
+            </p>
+
+            <div class="dialectic-proof-grid">
+              <div class="proof-col">
+                <h4><span>✦</span> 存在论推演链条</h4>
+                <div class="proof-chain">
+                  <div class="proof-step">
+                    <span class="step-num">1</span>
+                    <div class="step-content">
+                      <strong>本质与存在的偶合：</strong>
+                      <p>我们可以清晰理解“三角形”或“独角兽”的本质定义，但这并不意味着它们在现实中必定存在。有限事物的存在是对本质的赋予。</p>
+                    </div>
+                  </div>
+                  <div class="proof-step">
+                    <span class="step-num">2</span>
+                    <div class="step-content">
+                      <strong>必然存在者的推出：</strong>
+                      <p>偶合因果链条不可无限倒退，宇宙必然以一个“本质与存在浑然同一”的自必然者（Wājib al-Wujūd）为终极源泉。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="objection-col">
+                <h4><span>⚖</span> 安萨里的《哲学家之矛盾》</h4>
+                <div class="objection-box">
+                  <h5>神学偶因论反驳</h5>
+                  <p>
+                    伊斯兰思想家安萨里（Al-Ghazali）反驳哲学家：自然因果并非必然联系（如火与棉布接触），一切事物的变化皆是神圣意志在每一刹那的直接创造。这一争论直接启迪了后世笛卡尔、马勒伯朗士乃至休谟对因果必然性的批判。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 论题 5: 东亚宋代理学：理气本体与心性修养工夫 -->
+          <article class="thesis-card">
+            <div class="thesis-quote-header">
+              <span class="thesis-origin-badge">Song Neo-Confucianism · 理气心性与格物致知</span>
+              <blockquote class="thesis-main-quote">“未有天地之先，毕竟是先有此理。有此理，便有此天地；理气本无先后，而说有先后，亦无不可。”</blockquote>
+              <div class="thesis-original-language">《朱子语类·卷一》 / 程颢、程颐理学格言</div>
+              <div class="thesis-author-cite"><strong>朱熹 · 周敦颐 · 程颢 · 程颐</strong></div>
+            </div>
+
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.85;">
+              在吸收并回应佛教、道教哲学深刻挑战的基础上，宋代理学重构了儒家的形而上学与工夫论。朱熹以“理气论”为核心：形而上的普遍法则与伦理规范为“理”，具体凝聚成形质之载体为“气”；理是普遍必然的，气有清浊偏全之别。学者唯有通过“格物致知”与“居敬穷理”，在万事万物上体认天理，方能复其本性之清明，成就兼济天下的圣贤气象。
+            </p>
+          </article>
+
+          <!-- 论题 6: 奥卡姆剃刀与唯名论革命 -->
+          <article class="thesis-card">
+            <div class="thesis-quote-header">
+              <span class="thesis-origin-badge">The Nominalist Rupture · 共相之争与奥卡姆剃刀</span>
+              <blockquote class="thesis-main-quote">“若无必要，勿增实体。能以较少条件解释者，不必假定更多假设。”</blockquote>
+              <div class="thesis-original-language">Pluralitas non est ponenda sine necessitate (Occam's Razor)</div>
+              <div class="thesis-author-cite"><strong>威廉·奥卡姆（William of Ockham）</strong> 《逻辑大全》</div>
+            </div>
+
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.85;">
+              中世纪长达数百年的“共相之争（Problem of Universals）”在奥卡姆手中迎来了毁灭性转折。实在论（Realism）坚信抽象的“人性”、“善”是独立存在的本体；而奥卡姆的唯名论（Nominalism）断言：唯有个别的事物才是真正存在的，“共相”不过是人类心智为了指代相似个体而发明的名称（Nomen/声音）。这一剃刀不仅削掉了经院神学繁琐的玄学实体，更迫使思想家将目光投向具体、经验与经验自然，开启了近代科学与经验主义的先声。
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 核心哲人图谱 -->
+      <section class="philosophers-dossier-section">
+        <div class="container">
+          <div class="section-badge">Dossier of Thinkers</div>
+          <h2 class="section-title">信仰幽谷哲人星宿</h2>
+
+          <div class="dossier-grid">
+            <!-- 奥古斯丁 -->
+            <div class="dossier-card">
+              <div class="dossier-avatar-symbol">🕯</div>
+              <h3 class="dossier-name">圣奥古斯丁</h3>
+              <div class="dossier-greek-name">St. Augustine of Hippo</div>
+              <div class="dossier-dates">354年 — 430年</div>
+              <p class="dossier-desc">
+                古代基督教教父学派泰斗。融汇柏拉图思想与基督教神学，奠定西方原罪论、救赎恩典论与神圣时间哲学。
+              </p>
+              <div class="dossier-opus"><strong>代表作：</strong>《忏悔录》《上帝之城》</div>
+            </div>
+
+            <!-- 爱比克泰德与马可·奥勒留 -->
+            <div class="dossier-card">
+              <div class="dossier-avatar-symbol">🏛</div>
+              <h3 class="dossier-name">爱比克泰德与奥勒留</h3>
+              <div class="dossier-greek-name">Epictetus & Marcus Aurelius</div>
+              <div class="dossier-dates">公元1世纪 — 2世纪</div>
+              <p class="dossier-desc">
+                罗马斯多亚学派双璧。从被释奴隶到罗马帝国皇帝，共同倡导控制二分法与内省道德，成为人类战胜动荡命运的心灵灯塔。
+              </p>
+              <div class="dossier-opus"><strong>代表作：</strong>《沉思录》《手册》</div>
+            </div>
+
+            <!-- 托马斯·阿奎那 -->
+            <div class="dossier-card">
+              <div class="dossier-avatar-symbol">🏰</div>
+              <h3 class="dossier-name">托马斯·阿奎那</h3>
+              <div class="dossier-greek-name">Thomas Aquinas</div>
+              <div class="dossier-dates">1225年 — 1274年</div>
+              <p class="dossier-desc">
+                “天使博士”，中世纪经院哲学集大成者。构筑理性与信仰双重真理的巍峨殿堂，天主教官方哲学的最高权威。
+              </p>
+              <div class="dossier-opus"><strong>代表作：</strong>《神学大全》《反异教大全》</div>
+            </div>
+
+            <!-- 阿维森纳（伊本·西那） -->
+            <div class="dossier-card">
+              <div class="dossier-avatar-symbol">🌙</div>
+              <h3 class="dossier-name">阿维森纳（伊本·西那）</h3>
+              <div class="dossier-greek-name">Ibn Sina (Avicenna)</div>
+              <div class="dossier-dates">980年 — 1037年</div>
+              <p class="dossier-desc">
+                伊斯兰黄金时代哲学泰斗。在巴格达与波斯确立本质先于存在的形而上学公理，论证自必然存在者，深刻塑造欧洲经院哲学。
+              </p>
+              <div class="dossier-opus"><strong>代表作：</strong>《治愈论》《医典》</div>
+            </div>
+
+            <!-- 迈蒙尼德 -->
+            <div class="dossier-card">
+              <div class="dossier-avatar-symbol">✡️</div>
+              <h3 class="dossier-name">迈蒙尼德</h3>
+              <div class="dossier-greek-name">Moses Maimonides</div>
+              <div class="dossier-dates">1138年 — 1204年</div>
+              <p class="dossier-desc">
+                中世纪犹太哲学巅峰。以严密亚里士多德理性融通妥拉律法，确立精妙绝伦的否定神学，打破偶像崇拜与字面迷信。
+              </p>
+              <div class="dossier-opus"><strong>代表作：</strong>《迷途指津》（Guide for the Perplexed）</div>
+            </div>
+
+            <!-- 朱熹 -->
+            <div class="dossier-card">
+              <div class="dossier-avatar-symbol">📜</div>
+              <h3 class="dossier-name">朱熹</h3>
+              <div class="dossier-greek-name">Zhu Xi</div>
+              <div class="dossier-dates">1130年 — 1200年</div>
+              <p class="dossier-desc">
+                宋代理学集大成者。建立精密宏大的理气本体论与“格物穷理”修身体系，编纂《四书章句集注》，深刻影响东亚思想七百年。
+              </p>
+              <div class="dossier-opus"><strong>代表作：</strong>《朱子语类》《四书章句集注》</div>
+            </div>
+
+            <!-- 威廉·奥卡姆 -->
+            <div class="dossier-card">
+              <div class="dossier-avatar-symbol">✂️</div>
+              <h3 class="dossier-name">威廉·奥卡姆</h3>
+              <div class="dossier-greek-name">William of Ockham</div>
+              <div class="dossier-dates">1287年 — 1347年</div>
+              <p class="dossier-desc">
+                英国唯名论哲学家。以“奥卡姆剃刀”削减一切非必要的形而上学共相实体，将注意力引向可经验的具体事物，开启现代经验思维。
+              </p>
+              <div class="dossier-opus"><strong>核心原则：</strong>若无必要，勿增实体。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+            </div>
+
+            <!-- 奥卡姆 -->
+            <div class="dossier-card">
+              <div class="dossier-avatar-symbol">🗡</div>
+              <h3 class="dossier-name">威廉·奥卡姆</h3>
+              <div class="dossier-greek-name">William of Ockham</div>
+              <div class="dossier-dates">约1287年 — 1347年</div>
+              <p class="dossier-desc">
+                唯名论旗手，近代经验主义先知。以奥卡姆剃刀斩断经院哲学本体论繁冗假定，促成信仰与世俗理性的彻底脱钩。
+              </p>
+              <div class="dossier-opus"><strong>核心命题：</strong>奥卡姆剃刀、唯名论。</div>
+            </div>
+
+            <!-- 埃克哈特大师 -->
+            <div class="dossier-card">
+              <div class="dossier-avatar-symbol">✨</div>
+              <h3 class="dossier-name">埃克哈特大师</h3>
+              <div class="dossier-greek-name">Meister Eckhart</div>
+              <div class="dossier-dates">1260年 — 1328年</div>
+              <p class="dossier-desc">
+                德国神秘主义大师。主张灵魂最深处的“神火花”能直接融入无相的神性深渊，深刻启发了后世黑格尔与海德格尔。
+              </p>
+              <div class="dossier-opus"><strong>思想特征：</strong>神秘主义神性合一论。</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 历史转折启示 -->
+      <section class="container">
+        <div class="impact-banner">
+          <div class="impact-col">
+            <h3>历史断裂：共相的黄昏与个体的复兴</h3>
+            <p>
+              中世纪后期的唯名论革命，是人类意识史上最重大的解构之一。当思想家不再相信“抽象观念”拥有客观存在，唯一的真实便只能是现实中的每一个“具体个人”、“具体石头”。这直接催生了文艺复兴对个体价值的赞美，并为近代实证科学铺平了跑道。
+            </p>
+          </div>
+          <div class="impact-col">
+            <h3>当代投影：极简主义与模型压缩的奥卡姆法则</h3>
+            <p>
+              在现代统计学、机器学习与信息论中，“奥卡姆剃刀”已演变为形式化的“最小描述长度原则（Minimum Description Length）”与正则化惩罚。过度拟合复杂的形而上学实体终将被剪除，最优雅的模型永远是解释力最强而参数最简者。
+            </p>
+          </div>
+        </div>
+
+        <!-- 纪元跳转分页 -->
+        <div class="epoch-pagination">
+          <a href="./01-axial-ontology.html" class="pagination-btn">
+            <span class="pagination-label">上一个转折</span>
+            <span class="pagination-title">← 第一纪元：轴心破晓与本体之问</span>
+          </a>
+          <a href="./03-subject-epistemology.html" class="pagination-btn next">
+            <span class="pagination-label">下一个转折</span>
+            <span class="pagination-title">第三纪元：主体觉醒与认识论转向 →</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+      <div class="container footer-bottom">
+        <span>© 2026 逻各斯的星宿 · 第二纪元：信仰幽谷与理性天梯</span>
+        <a href="../index.html" style="color: var(--gold-light);">返回首页 ↑</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
